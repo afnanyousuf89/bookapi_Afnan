@@ -60,6 +60,28 @@ describe('My Tests for Book API', () => {
 
 	});
 
+	//4 Given that I have a book in my list, when I call removeBook("<title>") with "title" representing the title of my book that I want to delete, then when I call getBooks() the book I deleted should no longer be there.
+	test('Delete Book by Title', () => {
+		//arrange 
+
+		ReadingBook.allbooks = new Array();
+
+		var b = new MyClasses.Book('ABC Book','Afnan',255,1965);
+		var c = new MyClasses.Book('Song of ice and fire','wasey',255,1965);
+
+		//act
+		ReadingBook.addbook(b);
+		ReadingBook.addbook(c);
+		const ans = ReadingBook.allbooks.length;
+
+		ReadingBook.deletebook("ABC Book");
+
+		const count = ReadingBook.numberRead();
+		//assert
+		expect(count).toBe(1);
+
+	});
+
 
 
 
