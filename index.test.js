@@ -46,6 +46,20 @@ describe('My Tests for Book API', () => {
 
 	});
 
+	//3 Given that I have an empty list, when I add additional books to the list I expect the numberRead to return the total number of books in my list.
+	test('Return count of total books upon adding book', () => {
+		//arrange 
+		var b = new MyClasses.Book('ABC Book','Afnan',255,1965);
+		//act
+		ReadingBook.addbook(b);
+		const ans = ReadingBook.allbooks.length;
+
+		const count = ReadingBook.numberRead();
+		//assert
+		expect(count).toBe(ans);
+
+	});
+
 
 
 
