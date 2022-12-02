@@ -1,5 +1,5 @@
-class Book{
-	constructor(title,author,pagelength,year){
+class Book {
+	constructor(title, author, pagelength, year) {
 		this.title = title;
 		this.author = author;
 		this.pagelength = pagelength;
@@ -7,16 +7,28 @@ class Book{
 	}
 }
 
-class ReadingBook{
+class ReadingBook {
 	constructor() {
 		this.allbooks = [];
-	  }
+	}
+
+	getbooks() {
+		return this.allbooks.length;
+	}
+
+	addbook(b) {
+		this.allbooks.push(b);
+	}
+
 }
 
 
 
-function getbooks(){
-	return new ReadingBook().allbooks.length;
-}
 
-module.exports = getbooks;
+
+
+
+module.exports = {
+	ReadingBook: ReadingBook,
+	Book : Book
+}
