@@ -1,0 +1,14 @@
+{
+  "name": "book_api_afnan",
+  "version": "1.0.0",
+  "description": "Book api test working Day 5",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Afnan",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
