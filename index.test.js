@@ -21,7 +21,7 @@ describe('My Tests for Book API', () => {
 		//arrange 
 		const ans = 0;
 		//act
-		const count = ReadingBook.getbooks();
+		const count = ReadingBook.numberRead();
 		//assert
 		expect(count).toBe(ans);
 
@@ -40,7 +40,7 @@ describe('My Tests for Book API', () => {
 		var b = new MyClasses.Book('ABC Book','Afnan',255,1965);
 		//act
 		ReadingBook.addbook(b);
-		const count = ReadingBook.getbooks();
+		const count = ReadingBook.numberRead();
 		//assert
 		expect(count).toBe(ans);
 

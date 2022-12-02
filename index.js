@@ -12,7 +12,7 @@ class ReadingBook {
 		this.allbooks = [];
 	}
 
-	getbooks() {
+	numberRead() {
 		return this.allbooks.length;
 	}
 
