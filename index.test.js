@@ -82,6 +82,30 @@ describe('My Tests for Book API', () => {
 
 	});
 
+	//5 Given that I have an empty list, when I add a new book I expect getBooks() to return a list of books that includes the book I added.
+
+	test('Check if book exists in the book list', () => {
+		//arrange 
+
+		ReadingBook.allbooks = new Array();
+
+		var b = new MyClasses.Book('ABC Book','Afnan',255,1965);
+		var c = new MyClasses.Book('Song of ice and fire','wasey',255,1965);
+
+		//act
+		ReadingBook.addbook(b);
+		ReadingBook.addbook(c);
+		const ans = ReadingBook.allbooks.length;
+
+		ReadingBook.checkbook(c)
+
+		const count = ReadingBook.numberRead();
+		//assert
+		expect(count).toBe(1);
+
+	});
+
+
 
 
 

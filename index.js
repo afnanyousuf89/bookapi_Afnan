@@ -31,9 +31,20 @@ class ReadingBook {
 
 		}
 
-		
-	}
 
+	}
+	checkbook(b)
+	{
+		for(let i=0;i<this.allbooks.length;i++){
+
+			// var b = this.allbooks[i];
+			if(title in this.addbooks){
+			}
+
+		}
+
+
+	}
 	
 	
 
